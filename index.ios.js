@@ -4,14 +4,18 @@ var {
   AppRegistry,
   MapView,
   View,
-  Stylesheet
+  StyleSheet
 } = React;
 
 
 var Weather = React.createClass({
-  render: function() {
 
+  render: function() {
+    return <MapView style={styles.map}>
+
+           </MapView>
   }
+  
 });
 
 var styles = StyleSheet.create({
@@ -19,3 +23,5 @@ var styles = StyleSheet.create({
     flex: 1
   }
 });
+
+AppRegistry.registerComponent('weather', () => Weather);
