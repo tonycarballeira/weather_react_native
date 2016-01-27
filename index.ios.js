@@ -9,6 +9,10 @@ var {
   StyleSheet
 } = React;
 
+// IMPORT API MODULE  file: api.js
+
+var Api = require('./src/api');
+
 // CREATE COMPONENT
 
 var Weather = React.createClass({
@@ -40,6 +44,11 @@ var Weather = React.createClass({
         latitude: region.latitude
       }
     });
+
+    Api(region.latitude, region.longitude)
+      .then(function(data){
+        
+      });
 
   }
 
