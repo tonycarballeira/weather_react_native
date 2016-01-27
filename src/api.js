@@ -8,14 +8,14 @@ module.exports = function(latitude, longitude) {
 	var url = `${rootUrl}&lat=${latitude}&lon=${longitude}`;  
 	console.log(url);
 
-	return fetch(url)                                                             // this will make request to the api server then come back and perform the function below
+	return fetch(url)                                                            
 		.then(function(response){
-			return response.json();                                  // formats what was received by request into a json promise
+			return response.json();                                  
 		})
-		.then(function(json){                                   //  parse promise for actual usable json data
+		.then(function(json){                                   
 
 			return {
-				city: json.name,                               // city closest to provided latitude and longitude
+				city: json.name,                               
 				temperature: kelvinToF(json.main.temp),
 				description: json.weather[0].description
 			}

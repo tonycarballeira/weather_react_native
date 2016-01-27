@@ -6,6 +6,7 @@ var {
   AppRegistry,
   MapView,
   View,
+  Text,
   StyleSheet
 } = React;
 
@@ -31,12 +32,16 @@ var Weather = React.createClass({
 
   render: function() {
 
-    return <MapView 
-            annotations={[this.state.pin]}
-            style={styles.map}
-            onRegionChangeComplete={this.onRegionChangeComplete}>
+    return <View>
 
-           </MapView>
+              <MapView 
+              annotations={[this.state.pin]}
+              style={styles.map}
+              onRegionChangeComplete={this.onRegionChangeComplete}>
+
+              </MapView>
+
+           </View>
   },
 
   onRegionChangeComplete: function(region) {
