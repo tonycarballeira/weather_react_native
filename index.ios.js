@@ -22,7 +22,10 @@ var Weather = React.createClass({
       pin: {
         latitude: 0,
         longitude: 0
-      }
+      },
+      city: '',
+      temperature: '',
+      description: ''
     };
   },
 
@@ -46,7 +49,12 @@ var Weather = React.createClass({
     });
 
     Api(region.latitude, region.longitude)
+
       .then((data) => {
+
+        console.log(data);
+        this.setState(data);
+        
 
       });
 
