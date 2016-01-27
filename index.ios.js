@@ -41,6 +41,12 @@ var Weather = React.createClass({
 
               </MapView>
 
+              <View>
+                <Text>{this.state.city}</Text>
+                <Text></Text>
+                <Text></Text>
+              </View>
+
            </View>
   },
 
