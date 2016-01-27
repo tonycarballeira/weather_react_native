@@ -32,7 +32,7 @@ var Weather = React.createClass({
 
   render: function() {
 
-    return <View>
+    return <View style={styles.container}>
 
               <MapView 
               annotations={[this.state.pin]}
@@ -41,10 +41,10 @@ var Weather = React.createClass({
 
               </MapView>
 
-              <View>
-                <Text>{this.state.city}</Text>
-                <Text></Text>
-                <Text></Text>
+              <View style={styles.textWrapper}>
+                <Text style={styles.text}>{this.state.city}</Text>
+                <Text style={styles.text}>{this.state.temperature}</Text>
+                <Text style={styles.text}>{this.state.description}</Text>
               </View>
 
            </View>
@@ -76,8 +76,25 @@ var Weather = React.createClass({
 // STYLING
 
 var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'stretch',
+    backgroundColor: '#F5FCFF'
+  },
+
   map: {
-    flex: 1
+    flex: 2,
+    marginTop: 30
+  },
+
+  textWrapper: {
+    flex: 1,
+    alignItems: 'center'
+  },
+
+  text: {
+    fontSize: 30
   }
 });
 
