@@ -46,8 +46,8 @@ var Weather = React.createClass({
     });
 
     Api(region.latitude, region.longitude)
-      .then(function(data){
-        
+      .then((data) => {
+
       });
 
   }
